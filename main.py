@@ -1,4 +1,5 @@
 from jinja2 import Template
+import os 
 
 coin_name = input('Write the name of the cryptocurrency: ')
 coin_CA = input('Write the CA of the cryptocurrency: ')
@@ -102,16 +103,23 @@ def create_html_page(coin_name, coin_CA, coin_telegram_link, background_color, o
         coin_name=coin_name,
         coin_CA=coin_CA,
         coin_pump_link=f"pump.fun/{coin_CA}",
-        coin_name_repeat=coin_name * 100,
+        coin_name_repeat=" ",
         coin_telegram_link=coin_telegram_link,
         background_color=background_color
     )
     
     # Write the rendered HTML to a file
-    with open(f"./templates/{output_file}", 'w') as f:
-        f.write(rendered_html)
+    try:
+        with open(f"./templates/{output_file}", 'w') as f:
+            f.write(rendered_html)
+        print(f"HTML page created: ./templates/{output_file}")
     
-    print(f"HTML page created: ./templates/{output_file}")
+    except FileNotFoundError:
+        os.makedirs('./templates/')
+        with open(f"./templates/{output_file}", 'w') as f:
+            f.write(rendered_html)
+        print(f"HTML page created: ./templates/{output_file}")
+
 
 # Example usage
 create_html_page(coin_name, coin_CA, telegram_link, background_color, f'{coin_name}.html')
