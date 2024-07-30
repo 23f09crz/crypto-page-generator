@@ -114,7 +114,8 @@ Then, the HTML file "$BILLY.html" will be created in the templates directory, he
 
 ## FAQ-ish
 - Do I have to choose the color using hexcode?
- Not necessarily, but there is no reason to not use it. You can choose exactly the type of color you want using hexcode, and that is much better than just sticking with "lightblue".  Also, getting the hexcode for a color is very easy, you can just google "color picker" and let it do the rest: 
+ Not necessarily, but there is no reason to not use it. You can choose exactly the type of color you want using hexcode, and that is much better than just sticking with "lightblue".  Also, getting the hexcode for a color is very easy, you can just google "color picker" and let it do the rest:
+
  ![Color Example](data/color_picker_example.png)
  - How do I put my page on the web?
  There are various ways to deploy your page online, there are free website hosting alternatives like vercel that will suit well a simple page like that.
