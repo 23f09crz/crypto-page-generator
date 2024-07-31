@@ -38,9 +38,9 @@ Also, this is a base version and you can absolutely change the code structure to
 
 ```bash
 
-git clone https://github.com/23f09crz/crypto-info-page-generator.git
+git clone https://github.com/23f09crz/crypto-page-generator.git
 
-cd crypto-info-page-generator
+cd crypto-page-generator
 
 ```
 
